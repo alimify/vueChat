@@ -1,0 +1,36 @@
+<!DOCTYPE html> 
+<html lang = "en">
+ 
+   <head> 
+      <meta charset = "utf-8" /> 
+   </head> 
+	
+   <body> 
+      <video autoplay></video> 
+      
+
+
+<script>
+navigator.getWebcam = (navigator.getUserMedia || navigator.webKitGetUserMedia || navigator.moxGetUserMedia || navigator.mozGetUserMedia || navigator.msGetUserMedia);
+if (navigator.mediaDevices.getUserMedia) {
+    navigator.mediaDevices.getUserMedia({  audio: true, video: true })
+    .then(function (stream) {
+                  //Display the video stream in the video object
+     })
+     .catch(function (e) { logError(e); });
+}
+else {
+navigator.getWebcam({ audio: true, video: true }, 
+     function (stream) {
+             //Display the video stream in the video object
+     }, 
+     function () { logError("Web cam is not accessible."); });
+}
+function logError(a){
+	console.log(a)
+}
+</script>
+
+   </body>
+	
+</html>

@@ -1,0 +1,17 @@
+{
+  "name": "vuechat",
+  "version": "1.0.0",
+  "description": "This is my learning based activity",
+  "main": "server.js",
+  "dependencies": {
+    "socket.io": "^2.1.1",
+    "vue": "^2.5.16"
+  },
+  "devDependencies": {},
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "start": "node server.js"
+  },
+  "author": "Abdul Alim",
+  "license": "MIT"
+}
